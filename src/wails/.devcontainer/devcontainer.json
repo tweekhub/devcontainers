@@ -1,0 +1,44 @@
+{
+	"name": "Wails Development Environment",
+	//"image": "mcr.microsoft.com/devcontainers/base:${templateOption:imageVariant}",
+	"build": {
+	  "dockerfile": "Dockerfile"
+	},
+	"features": {
+	  "ghcr.io/devcontainers/features/go:1": {
+		"version": "1.22"
+	  },
+	  "ghcr.io/devcontainers/features/node:1": {
+		"version": "20"
+	  }
+	},
+	"customizations": {
+	  "vscode": {
+		"extensions": [
+		  "golang.go",
+		  "dbaeumer.vscode-eslint",
+		  "esbenp.prettier-vscode",
+		  "ms-vscode.vscode-typescript-next"
+		],
+		"settings": {
+		  "go.toolsManagement.checkForUpdates": "local",
+		  "go.useLanguageServer": true
+		}
+	  }
+	},
+	"forwardPorts": [3000],
+	"remoteUser": "vscode",
+	// 👇 Features to add to the Dev Container. More info: https://containers.dev/implementors/features.
+	// "features": {},
+
+	// 👇 Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [],
+
+	"postCreateCommand": "echo '${templateOption:favorite}' > /tmp/color.txt"
+	// "postCreateCommand": "go install github.com/wailsapp/wails/v2/cmd/wails@latest && wails doctor",
+	// 👇 Configure tool-specific properties.
+	// "customizations": {},
+
+	// 👇 Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+	// "remoteUser": "root"
+  }
