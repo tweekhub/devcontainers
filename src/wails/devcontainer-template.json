@@ -1,0 +1,33 @@
+{
+    "id": "wails-development",
+    "version": "1.0.0",
+    "name": "Wails Development Environment",
+    "description": "A Template for building Wails applications with Go and Node.js",
+    "documentationURL": "https://github.com/tweekhub/devcontainers/tree/main/src/wails",
+    "publisher": "YourName",
+    "licenseURL": "https://github.com/tweekhub/devcontainers/blob/main/LICENSE",
+    "options": {
+      "imageVariant": {
+        "type": "string",
+        "description": "Ubuntu version:",
+        "proposals": [
+          "jammy",
+          "focal"
+        ],
+        "default": "jammy"
+      },
+      "nodeVersion": {
+        "type": "string",
+        "description": "Node.js version:",
+        "proposals": [
+          "20",
+          "18",
+          "16"
+        ],
+        "default": "20"
+      }
+    },
+    "platforms": [
+        "Any"
+    ]
+  }
