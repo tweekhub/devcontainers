@@ -2,6 +2,7 @@ name: "Release Dev Container Templates & Generate Documentation"
 on:
   workflow_dispatch:
 
+
 jobs:
   deploy:
     if: ${{ github.ref == 'refs/heads/main' }}
@@ -19,7 +20,6 @@ jobs:
           publish-templates: "true"
           base-path-to-templates: "./src"
           generate-docs: "true"
-
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
